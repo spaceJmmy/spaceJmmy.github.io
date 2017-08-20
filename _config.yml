@@ -98,12 +98,12 @@ deploy:
  type: git
  repo: 
      github: git@github.com:spaceJmmy/spaceJmmy.github.io.git,master
- message: site updated at {{ now("YYYY-MM-DD HH:mm:ss") }} 
+ message: updated at {{ now("YYYY-MM-DD HH:mm:ss") }} 
 
 
 backup:
   type: git
   repository:
             github: git@github.com:spaceJmmy/spaceJmmy.github.io.git,src
-  message: src updated at {{ now("YYYY-MM-DD HH:mm:ss") }} 
+  message: updated at {{ now("YYYY-MM-DD HH:mm:ss") }} 
 
