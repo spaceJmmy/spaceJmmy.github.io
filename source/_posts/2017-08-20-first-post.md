@@ -225,6 +225,8 @@ $ hexo b
   $ hexo b #备份站点源代码到src分支
   ```
 
+---
+
 # 换台电脑重新部署（记得添加新的SSH key）
 &emsp;&emsp;&ensp;得益于前面的工作，换台电脑我们只需要clone仓库的src分支，然后重新生成hexo博客环境来撰写和发布post。
 ``` bash
