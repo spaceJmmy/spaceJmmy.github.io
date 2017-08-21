@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[将deb软件和依赖打包成离线安装包]]></title>
+      <url>/2017/08/21/2017-08-21-%E5%B0%86deb%E8%BD%AF%E4%BB%B6%E5%92%8C%E4%BE%9D%E8%B5%96%E6%89%93%E5%8C%85%E6%88%90%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85/</url>
+      <content type="html"><![CDATA[<h1 id="歌曲推送"><a href="#歌曲推送" class="headerlink" title="歌曲推送"></a>歌曲推送</h1><center><br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1503338212847&amp;di=48eb9525b1e04ada2c899c105e746529&amp;imgtype=0&amp;src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fbaike%2Fs%3D500%2Fsign%3D4b0d4b6cd758ccbf1fbcb53a29dabcd4%2F7c1ed21b0ef41bd555bd0a2a57da81cb38db3d06.jpg" alt=""><br><br>《不为谁而作的歌》- 林俊杰<br><audio src="http://up.mcyt.net/md5/53/Njc0MTEyNw_Qq4329912.mp3" controls="controls"><br>您的浏览器不支持 audio 标签。<br></audio><br><br><br> 不为谁而作，却更深植于你我的内心。<br>「一年前的今天我开始了一个全新的旅程，我下了一个决心-卸下了对于流行音乐的包袱，重新定义我与自己的音乐。<br>我问了自己一个问题：音乐制作的过程，还有什么是我还没尝试过的？<br>于是我开始了这个计划。我希望把我内心深处许多说不出来的感触，用琴声，用旋律，用自己的声音表达出来。希望这样的举动，能够让我看到一个从来未见过的自己，跟那个一直躲在自己心里某处的自己 聊聊天，谈谈心。<br>我发现，我很久没有好好 跟自己对话 了。」～JJ LIN「和自己对话 From M.E. To Myself」<br>「安静，才能听见自己」<br></center>
+
+<hr>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;&ensp;linux发行版有很多，软件的打包安装方式也有很多，我一直使用ubuntu，ubuntu基于debian，属于deb系，deb系有很庞大的软件仓库，也有很强大的安装工具，那就是apt，只需一条 apt intall software_name 便可从软件源安装完成，有网的话 apt 一键安装，各种依赖 apt 会自动解决，但是离线的话怎么办呢？下面就来给出解决办法。</p>
+<h1 id="软件源含有所要安装的软件"><a href="#软件源含有所要安装的软件" class="headerlink" title="软件源含有所要安装的软件"></a>软件源含有所要安装的软件</h1><p>这种情况比较轻松，以下命令就能轻松完成，<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo apt clean <span class="comment">#清空缓存</span></div><div class="line">$ sudo apt install -d software_name <span class="comment"># -d 参数的意思是只下载不安装</span></div></pre></td></tr></table></figure></p>
+<p>执行之后，便会在 /var/cache/apt/archives 目录下看到软件和他的依赖包，将这些deb拷贝出来并压缩，便可制成离线安装包。</p>
+<h1 id="软件源不含有所要安装的软件"><a href="#软件源不含有所要安装的软件" class="headerlink" title="软件源不含有所要安装的软件"></a>软件源不含有所要安装的软件</h1><p>这种情况也不是很难，以搜狗输入法为例，<br>下载sogoupinyin_2.1.0.0086_amd64.deb，并安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo dpkg -i sogoupinyin_2.1.0.0086_amd64.deb</div></pre></td></tr></table></figure></p>
+<p>这时会看到错误提示说未安装依赖。<br>接下来是重点，执行以下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo apt clean <span class="comment">#清空缓存</span></div><div class="line">$ sudo apt-get install -f</div></pre></td></tr></table></figure></p>
+<p>执行之后，便会安装缺少的依赖项，这些依赖包同样在 /var/cache/apt/archives 目录中，将这些deb拷贝出来和主deb压缩，便可制成离线安装包。这里需要注意的是，一定要用 apt-get 命令安装，因为 apt 命令安装后会自动清空缓存，这样会导致依赖包被删。</p>
+<hr>
+<p>&emsp;&emsp;&ensp;先到这里吧，这是小白的我总结出来的，大神们肯定还有更高明的办法，以后学习到了再来更新，哈哈…</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 其他 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> deb </tag>
+            
+            <tag> linux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[第一篇post：庆祝博客搭建成功]]></title>
+      <url>/2017/08/20/2017-08-20-first-post/</url>
+      <content type="html"><![CDATA[<p>&emsp;&emsp;&ensp;先来听一听这段时间很有感触的一首歌… &emsp; 《追光者》</p>
+<center><br><br><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=483671599&auto=0&height=66"></iframe><br>备份音乐《追光者》<br><audio src="http://mp3.haoduoge.com/s/2017-06-20/1497945728.mp3" controls="controls"><br>您的浏览器不支持 audio 标签。<br></audio><br><br><br>歌曲《追光者》，电视剧《夏至未至》插曲，立夏人物曲。由唐恬作词，马敬作曲，岑宁儿细腻地唱出剧中角色立夏面对爱情委婉又小心翼翼的模样，诠释了这首歌盛满纯真的感觉，收录于专辑《夏至未至 电视原声带》中，发行于2017年06月16日。<br></center>
+
+<hr>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;&ensp;一直想搭建自己的博客，但是一直没实践，只怪自己太懒。这次终于下定决心去实践，不过像我等小白来来回回折腾了好几天，本来想省点事直接在github上小改一下，谁知道老是出问题，一提交就收到Page build failure邮件，头疼的我差点放弃，最后狠下心来在本地安装了jekyll，一边调试一边修改，总算调通了，然后push到github，刷新主页，-_-，404找不到页面！妈呀，搜了好久解决办法，最后按照网上说的bundle update升级到了和github一样的最新版，这次报错了：MethedError：not find methed to_liquid for…想了半天，当前’github-pages’包的最新版是155,我把Gemfile中的’github-pages’改成了’github-pages’, ‘~&gt; 154’，也就是从默认的当前最新版本155降到了154,运行bundel exec jekyll serve，完美通过。。。我就郁闷了，原来这个jekyll-next主题已经不适用最新版的github-pages了。那怎么办呢，直接用hexo+next吧，索性静态页面就静态到底吧。</p>
+<h1 id="hexo-next搭建过程（基于ubuntu）"><a href="#hexo-next搭建过程（基于ubuntu）" class="headerlink" title="hexo+next搭建过程（基于ubuntu）"></a>hexo+next搭建过程（基于ubuntu）</h1><ul>
+<li>注册github账户</li>
+<li>新建一个<usrname.github.io>仓库，因为静态网站提交到这个仓库的master分支之后，访问 <a href="https://usrname.github.io" target="_blank" rel="external">https://usrname.github.io</a> 就可以看到网站啦^_^</usrname.github.io></li>
+<li>安装node</li>
+<li>安装git</li>
+<li><p>安装Hexo<br>这里先安装cnpm，以加快npm包的下载速度：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure>
+<p>然后，安装hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cnpm install hexo -g</div></pre></td></tr></table></figure>
+</li>
+<li><p>初始化框架</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;blog-folder&gt;</div><div class="line">$ <span class="built_in">cd</span> &lt;blog-folder&gt;</div><div class="line">$ cnpm install</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装Next主题</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> your-hexo-site</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
+<p>修改站点_config.yml配置项theme：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: next</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置启用local_search</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> your-hexo-site</div><div class="line">$ cnpm install hexo-generator-search --save</div></pre></td></tr></table></figure>
+<p>编辑站点_config.yml，增加以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">search:</div><div class="line">  path: search.xml</div><div class="line">  field: post</div><div class="line">  format: html</div><div class="line">  limit: 10000</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装hexo-deployer-git</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> your-hexo-site</div><div class="line">$ cnpm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>修改站点_config.yml：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: &lt;repository url&gt;</div><div class="line">  branch: [branch]</div><div class="line">  message: 提交信息(默认为 Site updated: &#123;&#123; now(YYYY-MM-DD HH:mm:ss) &#125;&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>新建文章</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"Hello World"</span></div></pre></td></tr></table></figure>
+<p>此时会在/source/_post目录下添加hello-world.md文件</p>
+</li>
+<li><p>添加关于页面</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new page about</div></pre></td></tr></table></figure>
+<p>此时会在/source/目录下生成about文件夹</p>
+</li>
+<li><p>添加分类</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new page categories</div></pre></td></tr></table></figure>
+<p>此时会在/source/目录下生成categries文件夹，<br>编辑里面的index.md，添加 type: categories</p>
+</li>
+<li><p>添加标签</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new page tags</div></pre></td></tr></table></figure>
+<p>此时会在/source/目录下生成tags文件夹，<br>编辑里面的index.md，添加 type: tags</p>
+</li>
+<li><p>生成网站</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo generate </div><div class="line">或者 </div><div class="line">$ hexo g</div></pre></td></tr></table></figure>
+<p>此时会将/source中的.md文件生成到/public中，形成网站的静态文件。</p>
+</li>
+<li><p>本地服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div><div class="line">或者</div><div class="line">$ hexo s</div></pre></td></tr></table></figure>
+<p>便可预览网站</p>
+</li>
+<li>部署网站<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div><div class="line">或者</div><div class="line">$ hexo d</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<p>&emsp;&emsp;&ensp;等等， hexo d 之后出现了下面信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$ INFO  Deploying: git</div><div class="line">$ You have to configure the deployment settings <span class="keyword">in</span> _config.yml first!</div><div class="line"></div><div class="line">$ Example:</div><div class="line">$   deploy:</div><div class="line">$     <span class="built_in">type</span>: git</div><div class="line">$     repo: &lt;repository url&gt;</div><div class="line">$     branch: [branch]</div><div class="line">$     message: [message]</div><div class="line"></div><div class="line">$     extend_dirs: [extend directory]</div><div class="line"></div><div class="line">$ For more <span class="built_in">help</span>, you can check the docs: http://hexo.io/docs/deployment.html</div></pre></td></tr></table></figure></p>
+<p>搜索了解决办法，但不是很明确，试了半天，最后原来是多了一个空格，就是_config.yml中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">空格空格type: git</div></pre></td></tr></table></figure></p>
+<p>改成<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">空格type: git</div></pre></td></tr></table></figure></p>
+<p>就好了,真是好难发现啊！</p>
+<hr>
+<h1 id="github设置添加SSH-key"><a href="#github设置添加SSH-key" class="headerlink" title="github设置添加SSH key"></a>github设置添加SSH key</h1><ul>
+<li>本地生成ssh key<br>https每次push需要输入用户名和密码，为了以后部署方便，我们使用ssh提交，使用ssh需要配置添加SSH key，具体如下：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> ~/.ssh</div><div class="line">$ ssh-keygen -C <span class="string">"your_computer_name"</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>接着会提示输入文件名，默认就行了，Enter<br>再接着会提示你输入两次密码，这个是push时候的密码，我们选择空密码，Enter<br>没问题的话就成功了。</p>
+<ul>
+<li>添加ssh key到github<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ clip &lt; ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>然后登录github，进入右上角Account Settings，然后点击菜单栏的SSH key进入页面添加key，<br>点击Add SSH key按钮，把复制的SSH key代码粘贴到key所对应的输入框，点击确认，Title会默认使用你的邮件名称。</p>
+<ul>
+<li>测试该SSH key<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>出现<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ Hi spaceJmmy! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></div><div class="line"><span class="string">$ Connection to github.com closed.</span></div></pre></td></tr></table></figure></p>
+<p>OK，测试成功^_^</p>
+<hr>
+<h1 id="增加源码备份功能"><a href="#增加源码备份功能" class="headerlink" title="增加源码备份功能"></a>增加源码备份功能</h1><p>&emsp;&emsp;&ensp;能够部署静态网站之后，我们还想把网站的源码备份到远程仓库，我们的思路是master分支存放生成的静态页面，src分支存放网站的源代码，这样以后换台机器可以直接clone下来src分支，然后添加发布新的post。这里推荐一个很好的npm包，可以实现源码备份功能，叫作<a href="https://github.com/coneycode/hexo-git-backup" target="_blank" rel="external">hexo-git-backup
+</a>，下面进行安装配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cnpm install hexo-git-backup --save</div></pre></td></tr></table></figure></p>
+<p>然后配置站点_config.yml文件，<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ backup:</div><div class="line">$     <span class="built_in">type</span>: git</div><div class="line">$     message: update xxx</div><div class="line">$     repository:</div><div class="line">$        github: git@github.com:spaceJmmy/spaceJmmy.github.io.git,src</div><div class="line">$        <span class="comment">#gitcafe: git@github.com:xxx/xxx.git,branchName</span></div></pre></td></tr></table></figure></p>
+<p>之后便可使用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo backup</div></pre></td></tr></table></figure></p>
+<p>或者<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo b</div></pre></td></tr></table></figure></p>
+<p>进行源码备份。</p>
+<h1 id="部署三部曲"><a href="#部署三部曲" class="headerlink" title="部署三部曲"></a>部署三部曲</h1><p>&emsp;&emsp;&ensp;以后写博客可以用hexo new post-title，也可以自己写md，然后放到/source/_posts文件夹下，写好博客后，来个拉风的部署三部曲，呼呼：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean <span class="comment">#清空缓存</span></div><div class="line">$ hexo d <span class="comment">#部署站点到master分支</span></div><div class="line">$ hexo b <span class="comment">#备份站点源代码到src分支</span></div></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="换台电脑重新部署（记得添加新的SSH-key）"><a href="#换台电脑重新部署（记得添加新的SSH-key）" class="headerlink" title="换台电脑重新部署（记得添加新的SSH key）"></a>换台电脑重新部署（记得添加新的SSH key）</h1><p>&emsp;&emsp;&ensp;得益于前面的工作，换台电脑我们只需要clone仓库的src分支，然后重新生成hexo博客环境来撰写和发布post。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> -b src git@github.com:spaceJmmy/spaceJmmy.github.io.git</div><div class="line">$ <span class="built_in">cd</span> spaceJmmy.github.io</div><div class="line">$ cnpm install</div></pre></td></tr></table></figure></p>
+<p>hexo环境搭建成功，然后 hexo s 本地预览，添加新的post，再按上述部署三部曲走起，呼呼…<br>有时 hexo b 会报错，提示执行 git push，那就 git push，你会看到 push 成功，哈哈。</p>
+<hr>
+<p>&emsp;&emsp;&ensp;至此大功告成，看着自己现在这个博客上线，心里确实美滋滋啊，haha。</p>
+<hr>
+<p>&emsp;&emsp;&ensp;这个博客的搭建，要感谢很多人…</p>
+<ul>
+<li>首先感谢github，提供了git pages来托管我们的博客，而且是免费的;</li>
+<li>然后要感谢提供主题模板的开源贡献者，使得像我这样的小白能够用上这么高大上的博客;</li>
+<li>最后要感谢我自己，能够下定决心克服搭建博客的困难，谁让我是小白呢，慢慢进步喽^_^</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 其他 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> hexo </tag>
+            
+            <tag> node </tag>
+            
+            <tag> git </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>
