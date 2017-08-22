@@ -40,7 +40,8 @@ description: linux下flareget下载是很快，但是需要收费，关键是外
 &emsp;&emsp;&ensp;主要过程可以参考这个链接：[ubuntu如何安装下载工具uget+aria2](http://jingyan.baidu.com/article/a65957f4e9adcf24e67f9bc0.html?st=2&net_type=&bd_page_type=1&os=0&rst=)
 
 # 几点说明
-&emsp;&emsp;&ensp;上面链接提到下载uget和aria2都是通过添加ppa源，其实ubuntu自带源已经有uget和aria2了，而且离最新版也不远，所以可以直接通过 apt install 安装。
+- 上面链接提到下载uget和aria2都是通过添加ppa源，其实ubuntu自带源已经有uget和aria2了，而且离最新版也不远，所以可以直接通过 apt install 安装。
+- FlashGot插件的配置过程可以省去，因为安装好FlashGot插件后，下载时会多出来一个FlashGot选项，那时候再选择uGet作为默认下载。
 
 ---
 
