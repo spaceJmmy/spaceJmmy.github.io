@@ -3,6 +3,44 @@
   
     
     <entry>
+      <title><![CDATA[安装配置下载工具uget+aria2]]></title>
+      <url>/2017/08/22/2017-08-22-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7uget+aria2/</url>
+      <content type="html"><![CDATA[<h1 id="歌曲推送"><a href="#歌曲推送" class="headerlink" title="歌曲推送"></a>歌曲推送</h1><center><br><img src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=944eba45741ed21b6dc426b7cc07b6a1/42166d224f4a20a455f9177099529822730ed0a5.jpg" alt=""><br><br><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=108965&auto=0&height=66"></iframe><br><!--《不为谁而作的歌》- 林俊杰
+<audio src='http://up.mcyt.net/md5/53/Njc0MTEyNw_Qq4329912.mp3' controls='controls' > 
+您的浏览器不支持 audio 标签。 
+</audio> 
+<br>--><br>《冻结》是由张思尔作词，林俊杰作曲，吴庆隆编曲，林俊杰演唱的一首歌曲，收录于2003年4月10日由海蝶音乐公司发行的专辑《乐行者》中  。《冻结》是林俊杰的代表作品之一。<br>2003年，该曲获得MY FM 至尊流行榜冠军歌曲。<br></center>
+
+<hr>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;&ensp;linux下的下载工具很少有像迅雷那样强大的，flareget算是不错的一款，但是过了试用期就很头疼，因为没有国内支付方式，看到网上有推荐uget+aria2搭建免费小迅雷，这里记录下来，以备以后查看。</p>
+<h1 id="uget"><a href="#uget" class="headerlink" title="uget"></a>uget</h1><p>&emsp;&emsp;&ensp;<a href="http://ugetdm.com/" target="_blank" rel="external">uget官网</a></p>
+<h1 id="aria2"><a href="#aria2" class="headerlink" title="aria2"></a>aria2</h1><p>&emsp;&emsp;&ensp;<a href="http://aria2.github.io/" target="_blank" rel="external">aria2官网</a></p>
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><p>&emsp;&emsp;&ensp;主要过程可以参考这个链接：<a href="http://jingyan.baidu.com/article/a65957f4e9adcf24e67f9bc0.html?st=2&amp;net_type=&amp;bd_page_type=1&amp;os=0&amp;rst=" target="_blank" rel="external">ubuntu如何安装下载工具uget+aria2</a></p>
+<h1 id="几点说明"><a href="#几点说明" class="headerlink" title="几点说明"></a>几点说明</h1><p>&emsp;&emsp;&ensp;上面链接提到下载uget和aria2都是通过添加ppa源，其实ubuntu自带源已经有uget和aria2了，而且离最新版也不远，所以可以直接通过 apt install 安装。</p>
+<hr>
+<p>&emsp;&emsp;&ensp;这篇比较水，但还是记下来吧，好记性不如烂笔头，哈哈</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 其他 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> uget </tag>
+            
+            <tag> aria2 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[将deb软件和依赖打包成离线安装包]]></title>
       <url>/2017/08/21/2017-08-21-%E5%B0%86deb%E8%BD%AF%E4%BB%B6%E5%92%8C%E4%BE%9D%E8%B5%96%E6%89%93%E5%8C%85%E6%88%90%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85/</url>
       <content type="html"><![CDATA[<h1 id="歌曲推送"><a href="#歌曲推送" class="headerlink" title="歌曲推送"></a>歌曲推送</h1><center><br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1503338212847&amp;di=48eb9525b1e04ada2c899c105e746529&amp;imgtype=0&amp;src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fbaike%2Fs%3D500%2Fsign%3D4b0d4b6cd758ccbf1fbcb53a29dabcd4%2F7c1ed21b0ef41bd555bd0a2a57da81cb38db3d06.jpg" alt=""><br><br>《不为谁而作的歌》- 林俊杰<br><audio src="http://up.mcyt.net/md5/53/Njc0MTEyNw_Qq4329912.mp3" controls="controls"><br>您的浏览器不支持 audio 标签。<br></audio><br><br><br> 不为谁而作，却更深植于你我的内心。<br>「一年前的今天我开始了一个全新的旅程，我下了一个决心-卸下了对于流行音乐的包袱，重新定义我与自己的音乐。<br>我问了自己一个问题：音乐制作的过程，还有什么是我还没尝试过的？<br>于是我开始了这个计划。我希望把我内心深处许多说不出来的感触，用琴声，用旋律，用自己的声音表达出来。希望这样的举动，能够让我看到一个从来未见过的自己，跟那个一直躲在自己心里某处的自己 聊聊天，谈谈心。<br>我发现，我很久没有好好 跟自己对话 了。」～JJ LIN「和自己对话 From M.E. To Myself」<br>「安静，才能听见自己」<br></center>
