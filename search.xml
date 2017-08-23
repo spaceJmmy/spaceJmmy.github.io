@@ -3,6 +3,86 @@
   
     
     <entry>
+      <title><![CDATA[Lin+Win双系统设置时间同步和默认启动项]]></title>
+      <url>/2017/08/23/2017-08-23-Lin+Win%E5%8F%8C%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5%E5%92%8C%E9%BB%98%E8%AE%A4%E5%90%AF%E5%8A%A8%E9%A1%B9/</url>
+      <content type="html"><![CDATA[<h1 id="新歌推送（甚是激动啊）"><a href="#新歌推送（甚是激动啊）" class="headerlink" title="新歌推送（甚是激动啊）"></a>新歌推送（甚是激动啊）</h1><p>&emsp;&emsp;&ensp;睽违一年未发新作的“亚洲唱作天王”JJ林俊杰携全新单曲《丹宁执着》回归，新单曲将于8月23日23:00点独家登陆腾讯音乐娱乐集团旗下QQ音乐、酷狗音乐、酷我音乐三大平台。《丹宁执着》不仅蕴藏满满的音乐人执着，象征着JJ在音乐路上捍卫理想的坚持，也是他首次带徒弟“虚拟乐团”消除联萌亮相，让人十分期待。</p>
+<center><br><video src="https://f.us.sinaimg.cn/00060wz2lx07dC7i5Ipy010f01001gma0k01.mp4?label=mp4_ld&template=template_7&Expires=1503470021&ssig=AQjuL7I96d&KID=unistore,video
+" controls="controls"><br>您的浏览器不支持 video 标签。<br></video><br></center>
+
+<p>&emsp;&emsp;&ensp;消除联萌是JJ林俊杰精心筹划了近一年的全新“虚拟乐团”，这次是JJ首次以“师父”的身份亲自带领四名正式团员亮相。JJ还特别邀请获得包括“年度制作”及“最佳摇滚专辑”等多项格莱美殊荣的“混音之王”Chris Lord-Alge参与制作，强烈风格让这首歌有着让人一听着迷的魅力。据悉，《丹宁执着》的灵感就是来自那个“改变时尚世界的牛仔裤”的爱情故事。而JJ被这样的爱情所打动，有感而发的写下了这首歌。</p>
+<p>&emsp;&emsp;&ensp;《丹宁执着》将于8月23日23：00点独家登陆QQ音乐、酷狗音乐、酷我音乐三大平台，让我们一起抓住2017年夏天的尾巴，在JJ用心、用力、用情的创作中摇滚一下吧!</p>
+<hr>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;&ensp;装过linux和win双系统的同学都知道,装完从Lin转到Win后，Win的系统时间会变成了格林尼治时间（也就是本地时间-8H）.另外,装完Win后,启动引导变成了linux的grub,linux变成了默认启动项,那如果想把Win设为默认启动项呢,别急,下面轻松搞定.</p>
+<h1 id="时间同步设置"><a href="#时间同步设置" class="headerlink" title="时间同步设置"></a>时间同步设置</h1><p>&emsp;&emsp;&ensp;废话不多说,一条命令搞定Lin和Win时间同步:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ timedatectl <span class="built_in">set</span>-local-rtc 1</div></pre></td></tr></table></figure></p>
+<p>搞定,想看详细情况的话可以输入以下命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ timedatectl</div></pre></td></tr></table></figure></p>
+<p>OK,这时候重启进入Win,你会发现Win的时间对了,哈哈哈.</p>
+<h1 id="默认启动项设置"><a href="#默认启动项设置" class="headerlink" title="默认启动项设置"></a>默认启动项设置</h1><p>&emsp;&emsp;&ensp;进入linux系统,执行以下操作,<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo gedit /etc/default/grub</div></pre></td></tr></table></figure></p>
+<p>这时候gedit会打开grub文件,将<br>``<br>GRUB_DEFAULT=0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">改成Win的序号,启动顺序默认从0开始,同时还可以修改”GRUB_TIMEOUT=10“中的默认等待时间，比如改成5秒,改好之后,保存关闭.然后执行</div><div class="line">``` bash</div><div class="line">$ sudo update-grub</div></pre></td></tr></table></figure></p>
+<p>OK搞定,这时候重启进入grub菜单,你会发现默认启动项已经变成了Win^_^</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 其他 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> 双系统 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[我的作品之：JM Editor + JM 点歌台]]></title>
+      <url>/2017/08/23/2017-08-23-JM%20Editor%20+%20JM%20%E7%82%B9%E6%AD%8C%E5%8F%B0/</url>
+      <content type="html"><![CDATA[<h1 id="歌曲推送"><a href="#歌曲推送" class="headerlink" title="歌曲推送"></a>歌曲推送</h1><center><br><img src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=c6a95905ff246b606f03ba268a917129/838ba61ea8d3fd1f3994a56c394e251f94ca5fc2.jpg" alt=""><br>《超越无限》- 林俊杰<br><audio src="http://mp3.haoduoge.com/s/2016-07-11/1468243691.mp3" controls="controls"><br>您的浏览器不支持 audio 标签。<br></audio><br></center>
+
+<p>&emsp;&emsp;&ensp;《超越无限》是由林怡凤填词，林俊杰谱曲并演唱的歌曲，收录于2016年6月21日由华纳音乐发行的同名专辑《超越无限》中。为林俊杰个人音乐纪录片《听·见林俊杰》的主题曲。<br>&emsp;&emsp;&ensp;2016年8月22日，该曲获得全球流行音乐金榜-上半年度20大金曲奖。</p>
+<hr>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;&ensp;刚开始学编程时就想做个有界面的软件,当时跟着小甲鱼学习,他就是以记事本为例,但没有完善所有功能,我就边学边做,把记事本完善了一下;另外因为我喜欢音乐,所以做了一个点歌台软件,现在想想怎么能叫点歌台呢,应该叫随机抽奖软件,哈哈.</p>
+<h1 id="JM-Editor"><a href="#JM-Editor" class="headerlink" title="JM Editor"></a>JM Editor</h1><p>&emsp;&emsp;&ensp;没啥好说的,直接上图<br><img src="http://ov3dvmzqf.bkt.clouddn.com/2017-08-23-JM%20Editor%20+%20JM%20%E7%82%B9%E6%AD%8C%E5%8F%B0/JM%20editor%201.png" alt=""><br><img src="http://ov3dvmzqf.bkt.clouddn.com/2017-08-23-JM%20Editor%20+%20JM%20%E7%82%B9%E6%AD%8C%E5%8F%B0/JM%20editor%202.png" alt=""><br><img src="http://ov3dvmzqf.bkt.clouddn.com/2017-08-23-JM%20Editor%20+%20JM%20%E7%82%B9%E6%AD%8C%E5%8F%B0/JM%20editor%203.png" alt=""><br><img src="http://ov3dvmzqf.bkt.clouddn.com/2017-08-23-JM%20Editor%20+%20JM%20%E7%82%B9%E6%AD%8C%E5%8F%B0/JM%20editor%204.png" alt=""><br><img src="http://ov3dvmzqf.bkt.clouddn.com/2017-08-23-JM%20Editor%20+%20JM%20%E7%82%B9%E6%AD%8C%E5%8F%B0/JM%20editor%205.png" alt=""></p>
+<h1 id="JM-点歌台"><a href="#JM-点歌台" class="headerlink" title="JM 点歌台"></a>JM 点歌台</h1><p>&emsp;&emsp;&ensp;这个名字起得有点大,其实没有播放功能,只有随机抽取功能,有点像随机抽奖程序,就是提取录入歌单,然后运行程序来读取歌单并随机滚动抽取.<br>特色:</p>
+<ul>
+<li>界面很炫,有水波纹效果</li>
+<li>可以DIY背景图片</li>
+<li>可以DIY背景音乐</li>
+</ul>
+<p>这里附上一个演示视频,来直观感受一下这个软件的效果:<br>(因为是在虚拟机里,稍微显卡,但不影响看他的效果.)</p>
+<center><br><video width="320" height="240" src="http://ov3dvmzqf.bkt.clouddn.com/2017-08-23-JM%20Editor%20+%20JM%20%E7%82%B9%E6%AD%8C%E5%8F%B0/JM%20%E7%82%B9%E6%AD%8C%E5%8F%B0%20-%20show.mp4" controls="controls"><br>您的浏览器不支持 video 标签。<br></video><br></center>
+
+<h1 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h1><p>&emsp;&emsp;&ensp;当时没想继续开发了,所以没留源代码,这里提供win下exe的下载地址:</p>
+<center><br><a href="http://ov3dvmzqf.bkt.clouddn.com/2017-08-23-JM%20Editor%20+%20JM%20%E7%82%B9%E6%AD%8C%E5%8F%B0/JM%20Editor%20+%20JM%20%E7%82%B9%E6%AD%8C%E5%8F%B0.zip" target="_blank" rel="external"><strong>JM Editor + JM 点歌台.zip</strong></a><br></center>
+
+<p><br></p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> 作品 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> works </tag>
+            
+            <tag> win </tag>
+            
+            <tag> software </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[linux下安装配置下载工具uget+aria2]]></title>
       <url>/2017/08/22/2017-08-22-linux%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7uget+aria2/</url>
       <content type="html"><![CDATA[<h1 id="歌曲推送"><a href="#歌曲推送" class="headerlink" title="歌曲推送"></a>歌曲推送</h1><center><br><img src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=944eba45741ed21b6dc426b7cc07b6a1/42166d224f4a20a455f9177099529822730ed0a5.jpg" alt=""><br><br><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=108965&auto=0&height=66"></iframe><br><!--《不为谁而作的歌》- 林俊杰
@@ -16,7 +96,10 @@
 <h1 id="uget"><a href="#uget" class="headerlink" title="uget"></a>uget</h1><p>&emsp;&emsp;&ensp;<a href="http://ugetdm.com/" target="_blank" rel="external">uget官网</a></p>
 <h1 id="aria2"><a href="#aria2" class="headerlink" title="aria2"></a>aria2</h1><p>&emsp;&emsp;&ensp;<a href="http://aria2.github.io/" target="_blank" rel="external">aria2官网</a></p>
 <h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><p>&emsp;&emsp;&ensp;主要过程可以参考这个链接：<a href="http://jingyan.baidu.com/article/a65957f4e9adcf24e67f9bc0.html?st=2&amp;net_type=&amp;bd_page_type=1&amp;os=0&amp;rst=" target="_blank" rel="external">ubuntu如何安装下载工具uget+aria2</a></p>
-<h1 id="几点说明"><a href="#几点说明" class="headerlink" title="几点说明"></a>几点说明</h1><p>&emsp;&emsp;&ensp;上面链接提到下载uget和aria2都是通过添加ppa源，其实ubuntu自带源已经有uget和aria2了，而且离最新版也不远，所以可以直接通过 apt install 安装。</p>
+<h1 id="几点说明"><a href="#几点说明" class="headerlink" title="几点说明"></a>几点说明</h1><ul>
+<li>上面链接提到下载uget和aria2都是通过添加ppa源，其实ubuntu自带源已经有uget和aria2了，而且离最新版也不远，所以可以直接通过 apt install 安装。</li>
+<li>FlashGot插件的配置过程可以省去，因为安装好FlashGot插件后，下载时会多出来一个FlashGot选项，那时候再选择uGet作为默认下载。</li>
+</ul>
 <hr>
 <p>&emsp;&emsp;&ensp;这篇比较水，但还是记下来吧，好记性不如烂笔头，哈哈</p>
 ]]></content>
