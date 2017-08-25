@@ -103,7 +103,7 @@
 <meta property="og:description" content="记录如何打包deb安装包和他的依赖，生成可以离线安装的完整包">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503338212847&di=48eb9525b1e04ada2c899c105e746529&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fbaike%2Fs%3D500%2Fsign%3D4b0d4b6cd758ccbf1fbcb53a29dabcd4%2F7c1ed21b0ef41bd555bd0a2a57da81cb38db3d06.jpg">
-<meta property="og:updated_time" content="2017-08-21T15:10:42.882Z">
+<meta property="og:updated_time" content="2017-08-25T05:11:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="将deb软件和依赖打包成离线安装包">
 <meta name="twitter:description" content="记录如何打包deb安装包和他的依赖，生成可以离线安装的完整包">
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-08-21T23:10:42+08:00">
-                2017-08-21
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-25T13:11:34+08:00">
+                2017-08-25
               </time>
             
           </span>
@@ -417,6 +417,7 @@
 <h1 id="软件源不含有所要安装的软件"><a href="#软件源不含有所要安装的软件" class="headerlink" title="软件源不含有所要安装的软件"></a>软件源不含有所要安装的软件</h1><p>这种情况也不是很难，以搜狗输入法为例，<br>下载sogoupinyin_2.1.0.0086_amd64.deb，并安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo dpkg -i sogoupinyin_2.1.0.0086_amd64.deb</div></pre></td></tr></table></figure></p>
 <p>这时会看到错误提示说未安装依赖。<br>接下来是重点，执行以下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo apt clean <span class="comment">#清空缓存</span></div><div class="line">$ sudo apt-get install -f</div></pre></td></tr></table></figure></p>
 <p>执行之后，便会安装缺少的依赖项，这些依赖包同样在 /var/cache/apt/archives 目录中，将这些deb拷贝出来和主deb压缩，便可制成离线安装包。这里需要注意的是，一定要用 apt-get 命令安装，因为 apt 命令安装后会自动清空缓存，这样会导致依赖包被删。</p>
+<p>另外需要注意的是,装好搜狗输入法之后,在Fcitx配置中,将启动输入法快捷键由 Ctrl+Space 换成别的,比如 Super+Space ,因为 Ctrl+Space 是 QtCreator 智能提示的快捷键,不改的话两者会发生冲突.</p>
 <hr>
 <p>&emsp;&emsp;&ensp;先到这里吧，这是小白的我总结出来的，大神们肯定还有更高明的办法，以后学习到了再来更新，哈哈…</p>
 
