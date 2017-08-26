@@ -1,6 +1,6 @@
 ---
 title: 第一篇post：庆祝博客搭建成功
-date: 2017-08-20 
+date: 2017-08-20
 categories:
   - 其他
 tags:
@@ -84,7 +84,7 @@ description: 记录博客搭建过程和感受
     type: git
     repo: <repository url>
     branch: [branch]
-    message: 提交信息(默认为 Site updated: {{ now(YYYY-MM-DD HH:mm:ss) }})
+    message: 提交信息(默认为 site updated: {{ now(YYYY-MM-DD HH:mm:ss) }})
   ```
 - 新建文章
   ``` bash
@@ -177,7 +177,7 @@ $ ssh-keygen -C "your_computer_name"
 $ clip < ~/.ssh/id_rsa.pub
 ```
 然后登录github，进入右上角Account Settings，然后点击菜单栏的SSH key进入页面添加key，
-点击Add SSH key按钮，把复制的SSH key代码粘贴到key所对应的输入框，点击确认，Title会默认使用你的邮件名称。
+点击Add SSH key按钮，把复制的SSH key代码粘贴到key所对应的输入框，点击确认，Title会默认使用你的"your_computer_name"。
 - 测试该SSH key
 ``` bash
 $ ssh -T git@github.com
