@@ -103,7 +103,7 @@
 <meta property="og:description" content="记录博客搭建过程和感受">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503148516430&di=2c41bb485a605fff7536d8c4da59fbc2&imgtype=0&src=http%3A%2F%2Fsc.sinaimg.cn%2F2013%2F0409%2FU4885P841DT20130409081537.jpg">
-<meta property="og:updated_time" content="2017-08-21T00:21:40.000Z">
+<meta property="og:updated_time" content="2017-08-26T11:49:14.696Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一篇post：庆祝博客搭建成功">
 <meta name="twitter:description" content="记录博客搭建过程和感受">
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-08-21T08:21:40+08:00">
-                2017-08-21
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-26T19:49:14+08:00">
+                2017-08-26
               </time>
             
           </span>
@@ -411,7 +411,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503148516430&di=2c41bb485a605fff7536d8c4da59fbc2&imgtype=0&src=http%3A%2F%2Fsc.sinaimg.cn%2F2013%2F0409%2FU4885P841DT20130409081537.jpg" rel="gallery_cj6rf7d5w0000qq1yvbcdgs4y"
+                 href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503148516430&di=2c41bb485a605fff7536d8c4da59fbc2&imgtype=0&src=http%3A%2F%2Fsc.sinaimg.cn%2F2013%2F0409%2FU4885P841DT20130409081537.jpg" rel="gallery_cj6t8yaaj0000mb1y95s863x3"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503148516430&di=2c41bb485a605fff7536d8c4da59fbc2&imgtype=0&src=http%3A%2F%2Fsc.sinaimg.cn%2F2013%2F0409%2FU4885P841DT20130409081537.jpg" itemprop="contentUrl"/>
               </a>
@@ -455,7 +455,7 @@
 <li><p>安装hexo-deployer-git</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> your-hexo-site</div><div class="line">$ cnpm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
 <p>修改站点_config.yml：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: &lt;repository url&gt;</div><div class="line">  branch: [branch]</div><div class="line">  message: 提交信息(默认为 Site updated: &#123;&#123; now(YYYY-MM-DD HH:mm:ss) &#125;&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: &lt;repository url&gt;</div><div class="line">  branch: [branch]</div><div class="line">  message: 提交信息(默认为 site updated: &#123;&#123; now(YYYY-MM-DD HH:mm:ss) &#125;&#125;)</div></pre></td></tr></table></figure>
 </li>
 <li><p>新建文章</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"Hello World"</span></div></pre></td></tr></table></figure>
@@ -499,7 +499,7 @@
 <li>添加ssh key到github<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ clip &lt; ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>然后登录github，进入右上角Account Settings，然后点击菜单栏的SSH key进入页面添加key，<br>点击Add SSH key按钮，把复制的SSH key代码粘贴到key所对应的输入框，点击确认，Title会默认使用你的邮件名称。</p>
+<p>然后登录github，进入右上角Account Settings，然后点击菜单栏的SSH key进入页面添加key，<br>点击Add SSH key按钮，把复制的SSH key代码粘贴到key所对应的输入框，点击确认，Title会默认使用你的”your_computer_name”。</p>
 <ul>
 <li>测试该SSH key<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div></pre></td></tr></table></figure>
 </li>
@@ -647,7 +647,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -669,7 +669,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
