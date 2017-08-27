@@ -113,7 +113,7 @@ photos:
  **Markdown:** 
   ```
   <center>
-  <video width=320 height=200 src='https://f.us.sinaimg.cn/00060wz2lx07dC7i5Ipy010f01001gma0k01.mp4?label=mp4_ld&template=template_7&Expires=1503799022&ssig=2HWQnNXXiJ&KID=unistore,video' controls='controls' > 
+  <video width=320 height=200 src='http://tb-video.bdstatic.com/tieba-smallvideo/32_054ab95c5e7edd7a22c913fd1d1d8a5c.mp4' controls='controls' > 
   您的浏览器不支持 video 标签。 
   </video>
   </center>
@@ -121,7 +121,7 @@ photos:
 
   **预览:**   
   <center>
-  <video width=320 height=200 src='https://f.us.sinaimg.cn/00060wz2lx07dC7i5Ipy010f01001gma0k01.mp4?label=mp4_ld&template=template_7&Expires=1503799022&ssig=2HWQnNXXiJ&KID=unistore,video' controls='controls' > 
+  <video width=320 height=200 src='http://tb-video.bdstatic.com/tieba-smallvideo/32_054ab95c5e7edd7a22c913fd1d1d8a5c.mp4' controls='controls' > 
   您的浏览器不支持 video 标签。 
   </video>
   </center>
