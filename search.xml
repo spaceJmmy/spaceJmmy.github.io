@@ -6,8 +6,8 @@
       <title><![CDATA[Hexo博客撰写之：MarkDown语法　（还有新歌推送<丹宁执着完整版>）]]></title>
       <url>/2017/08/27/2017-08-27-Hexo%E5%8D%9A%E5%AE%A2%E6%92%B0%E5%86%99%E4%B9%8BMarkDown%E8%AF%AD%E6%B3%95/</url>
       <content type="html"><![CDATA[<h1 id="新歌推送（丹宁执着完整版）"><a href="#新歌推送（丹宁执着完整版）" class="headerlink" title="新歌推送（丹宁执着完整版）"></a>新歌推送（丹宁执着完整版）</h1><p>&emsp;&emsp;&ensp;消除联萌是JJ林俊杰精心筹划了近一年的全新“虚拟乐团”，这次是JJ首次以“师父”的身份亲自带领四名正式团员亮相。JJ还特别邀请获得包括“年度制作”及“最佳摇滚专辑”等多项格莱美殊荣的“混音之王”Chris Lord-Alge参与制作，强烈风格让这首歌有着让人一听着迷的魅力。据悉，《丹宁执着》的灵感就是来自那个“改变时尚世界的牛仔裤”的爱情故事。而JJ被这样的爱情所打动，有感而发的写下了这首歌。</p>
-<!--<center>-->
-<p><video width="320" height="220" src="http://tb-video.bdstatic.com/tieba-smallvideo/250_9e5fdc5aaa8282d45cfcbccd677d3f35.mp4" controls="controls"><br>您的浏览器不支持 video 标签。<br></video><br><!--</center>--></p>
+<center><br><video width="320" height="220" src="http://tb-video.bdstatic.com/tieba-smallvideo/250_9e5fdc5aaa8282d45cfcbccd677d3f35.mp4" controls="controls"><br>您的浏览器不支持 video 标签。<br></video><br></center>
+
 <p>&emsp;&emsp;&ensp;【歌曲详情】</p>
 <p>　　你可知道，你身上穿的那件牛仔裤，蕴含著爱情，还浇注了一分热忱和感动。</p>
 <p>　　当布商 Levi Strauss 和裁缝师 Jacob Davis 得知一位女性客户提出，请他们缝製出一条耐用不怕磨损的裤子，给心爱的丈夫在砍伐木材时穿著不那麽容易破损，使他们製作加固牛仔裤的概念得到启发，进而改变世界的牛仔裤诞生了!</p>
@@ -129,7 +129,7 @@
 <p>浏览器打开 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> ，如果成功的话，你会发现你的博客已经呈现出你的信息了，吼吼，狂欢吧…… 不过，先别急，先把网站部署备份了再说：</p>
 <hr>
 <p>  OK，接下来部署备份你的网站，这时候在 bash 终端 Ctrl+C 停止服务器运行，然后输入：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
-<p>  你会发现静态网站已经 push 到你 repo 的 master 分支了。浏览器打开 your-github-username.github.io 就能看到你的博客了，哈哈……<br>  继续：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo b</div></pre></td></tr></table></figure></p>
+<p>  你会发现静态网站已经 push 到你 repo 的 master 分支了。浏览器打开 your-github-username.github.io 就能看到你的博客了，哈哈……<br>  继续，备份博客源码之前需要先删除当前目录下的 .git 文件夹，然后 bash　输入：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo b</div></pre></td></tr></table></figure></p>
 <p>  你会发现网站源码已经备份到你 repo 的 src 分支了，至此，可以开心的庆祝啦，哈哈。</p>
 <hr>
 <h1 id="博客以后的常态化管理"><a href="#博客以后的常态化管理" class="headerlink" title="博客以后的常态化管理"></a>博客以后的常态化管理</h1><p>&emsp;&emsp;&ensp;以后写博客只需要自己写一个 .md 文件，然后放到/source/_posts文件夹下，写好博客后，来个拉风的部署三部曲，呼呼：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean <span class="comment">#清空缓存</span></div><div class="line">$ hexo d <span class="comment">#部署站点到master分支</span></div><div class="line">$ hexo b <span class="comment">#备份站点源代码到src分支</span></div></pre></td></tr></table></figure></p>
@@ -270,9 +270,9 @@
             
             <tag> 教程 </tag>
             
-            <tag> uget </tag>
-            
             <tag> linux </tag>
+            
+            <tag> uget </tag>
             
         </tags>
         
@@ -306,9 +306,9 @@
             
             <tag> 教程 </tag>
             
-            <tag> linux </tag>
-            
             <tag> deb </tag>
+            
+            <tag> linux </tag>
             
         </tags>
         
