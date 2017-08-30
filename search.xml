@@ -79,7 +79,7 @@
 </tbody>
 </table>
 <ul>
-<li><h2 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h2>中文输入法状态下输入两个空格即可实现缩进．</li>
+<li><h2 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h2>输入法中文全角状态下输入两个空格即可实现缩进．输入两个　&emsp;　或　&ensp;　也可以实现空格缩进．</li>
 </ul>
 <ul>
 <li><h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2></li>
